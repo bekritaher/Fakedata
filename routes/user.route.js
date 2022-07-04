@@ -8,6 +8,6 @@ router.get('/index',UserController.index)
 //router.get('/shows/:id',UserController.shows)
 router.get('/',UserController.index)
 router.post('/stores',UserController.stores)
-router.get('/show/:id',UserController.show)
+router.get('/:phoneNumber',UserController.show)
 
 module.exports=router

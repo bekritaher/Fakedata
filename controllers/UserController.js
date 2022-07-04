@@ -25,8 +25,9 @@ const index=(req, res, next) =>
 // }
 
 const show= async (req, res) => {
-    res.send({ user: await User.findById(req.params.id) })
-    console.log(req.params.id)
+    let active= req.params.phoneNumber;
+    res.send({ user: await User.findOne({ 'phoneNumber': active }) })
+    console.log(req.params.phoneNumber)
   }
   
 
